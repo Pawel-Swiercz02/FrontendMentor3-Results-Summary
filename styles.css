@@ -1,189 +1,238 @@
-:root {
-    --violet: hsl(263, 55%, 52%);
-    --dark-grayish-blue: hsl(217, 19%, 35%);
-    --dark-blackish-blue: hsl(219, 29%, 14%);
-    --white: hsl(0, 0%, 100%);
-    --light-gray: hsl(0, 0%, 81%);
-    --light-grayish-blue: hsl(210, 46%, 95%); /* BACKGROUND */
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-main {
-    display: flex;
-    min-height: 100dvh;
-    align-items: center;
-    justify-content: center;
-}
-
 body {
-    font-size: 13px;
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    font-weight: 500;
-    background-color: var(--light-grayish-blue);
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
 }
 
-.grid-container {
-    max-width: 90%;
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+main {
+    height: 100dvh;
+    display: grid;
+    place-items: center;
 }
 
-.testimonial {
+.main-container {
+    max-width: 45%;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 1rem 1rem 1rem hsl(221, 100%, 96%);
+    border-radius: 2rem;
+}
+
+.left-panel, .right-panel {
+    display: flex;
+    flex-direction: column;
     padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 10px -3px var(--light-gray);
 }
 
-.grid-item1, .grid-item2, .grid-item5 {
-    color: var(--light-grayish-blue);
+/* RESULTS - LEFT PANEL */
+.left-panel {
+    align-items: center;
+    background: linear-gradient(
+        hsl(252, 100%, 67%),
+        hsl(241, 81%, 54%)
+    );
+    text-align: center;
+    color: white;
+    border-radius: 2rem;
 }
 
-.grid-item3, .grid-item4 {
-    color: var(--dark-blackish-blue);
+.title {
+    font-size: 1.3rem;
+    font-weight: 500;
 }
 
-.grid-item1 {
-    grid-column: span 2;
-    background-color: var(--violet);
-    z-index: 1;
-    position: relative;
+.left-h {
+    color: hsla(221, 100%, 96%, 0.7);
 }
 
-.quotation-mark-img {
-    width: 22%;
-    z-index: -1;
-    position: absolute;
-    top:0;
-    right: 7rem;
+/* CIRCULAR DIV - containing the score 76 of 100 */
+.score {
+    background: linear-gradient(
+        hsla(256, 72%, 46%, 1),
+        hsla(241, 72%, 46%, 0)
+    );
+    margin: 2rem auto;
+    padding: 2rem 3rem;
+    border-radius: 50%;
 }
 
-.grid-item2 {
-    background-color: var(--dark-grayish-blue);
+.score-main {
+    font-size: 4rem;
+    font-weight: 800;
 }
 
-.grid-item3 {
-    grid-row: span 2;
-    background-color: var(--white);
+.score-sub {
+    font-size: 0.9rem;
+    color: hsla(221, 100%, 96%, 0.4);
 }
 
-.grid-item4 {
-    background-color: var(--white);
+.sub-title {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 0.6rem;
 }
 
-.grid-item5 {
-    grid-column: span 2;
-    background-color: var(--dark-blackish-blue);
+.description {
+    max-width: 90%;
+    font-size: 1rem;
+    color: hsla(221, 100%, 96%, 0.7);
 }
 
-.item-heading {
+/* SUMMARY - RIGHT PANEL */
+.right-panel {
+    min-width: 50%;
+    gap: 1rem;
+}
+
+.right-h {
+    font-weight: 800;
+    color: hsl(224, 30%, 27%);
+}
+
+/* DIV containing the 4 categories with scores */
+.categories-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+.category-section {
+    display: flex;
+    flex-direction: row;
+    padding: 0.6rem;
+    border-radius: 0.8rem; 
+}
+
+/* .shadow and .shadow-2 classes create an effect of a 'shadow' at every corner of every category-section */
+.shadow {
+    border-radius: 0.6rem;
+}
+.shad-reaction {
+    background-color: hsla(0, 100%, 67%, 0.2);
+}
+.shad-memory {
+    background-color: hsla(39, 100%, 56%, 0.2);
+}
+.shad-verbal {
+    background-color: hsla(166, 100%, 37%, 0.2);
+}
+.shad-visual {
+    background-color: hsla(234, 85%, 45%, 0.2);
+}
+.shadow-2 {
+    background-color: white;
+    border-radius: 0.8rem;
+}
+
+.reaction {
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+.reaction .summary-h {
+    color: hsla(0, 100%, 67%, 0.7);
+}
+
+.memory {
+    background-color: hsla(39, 100%, 56%, 0.1);
+}
+.memory .summary-h {
+    color: hsla(39, 100%, 56%, 0.9);
+}
+
+.verbal {
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+.verbal .summary-h {
+    color: hsla(166, 100%, 37%, 0.9);
+}
+
+.visual {
+    background-color: hsla(234, 85%, 45%, 0.1);
+}
+.visual .summary-h {
+    color: hsla(234, 85%, 45%, 0.7);
+}
+
+.summary-h {
+     font-size: 1.2rem;
+}
+
+.summary-category-box {
     display: flex;
     flex-direction: row;
     gap: 1rem;
 }
 
-.photo {
-    border-radius: 50%;
-    max-width: 2.9rem;
+.summary-score-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 0.5rem;
 }
 
-.border-1 {
-    border: 0.3rem solid hsla(0, 0%, 81%, 0.5);
+.summary-score {
+    font-weight: 700;
+    color: hsl(224, 30%, 27%);
 }
 
-.border-violet {
-    border: 0.3rem solid var(--violet);
+.summary-max-score {
+    font-weight: 700;
+    color: hsla(224, 30%, 27%, 0.3);
 }
 
-.name {
-    font-size: 1.3rem;
-}
-
-.title {
+.continue-button {
+    background-color: hsl(224, 30%, 27%);
     font-size: 1.1rem;
-    opacity: 80%;
+    letter-spacing: 1px;
+    color: hsl(221, 100%, 96%);
+    padding: 0.9rem 0;
+    border-radius: 3rem;
+    border: none;
 }
 
-.heading {
-    font-size: 1.6rem;
-    padding: 1.5rem 0;
+.continue-button:hover {
+    background: linear-gradient(
+        hsl(252, 100%, 67%),
+        hsl(241, 81%, 54%)
+    );
 }
 
-.description {
-    opacity: 70%;
-    font-size: 1.1rem;
-    line-height: 1.5rem;
-}
-
-/* Prevents grid from creating a 5h column for items #4 and #5 on really wide screens */
-@media only screen and (min-width: 1791px) {
-    .grid-item4 {
-        grid-row: 2;
-    }
-
-    .grid-item5 {
-        grid-row: 2;
+/* Prevents the panel from stretching too wide - it doesn't look aesthetic when it's too stretched out */
+@media only screen and (min-width: 1440px) {
+    .main-container {
+        max-width: 650px;
     }
 }
 
-@media only screen and (max-width: 1430px) {
-    main {
-        margin: 1.5rem 0;
-    }
-
-    .grid-item5 {
-        grid-column: 2 / 4;
-        grid-row: 2;
+@media only screen and (max-width: 1340px) {
+    .main-container {
+       max-width: 615px;
     }
 }
 
-@media only screen and (max-width: 1040px) {
-    .grid-item5 {
-        grid-column: span 2;
-        grid-row: auto;
+/* At this point the layout changes into a column, but doesn't take the full width of 100% yet as that wouldn't look good */
+@media only screen and (max-width: 650px) {
+    .main-container {
+        max-width: 80%;  
+        flex-direction: column;
+        margin-top: 3rem;
     }
 }
 
-/* At this point the grid turns into one column for readability as 2 columns would get too squashed. */
-@media only screen and (max-width: 660px) {
-    .grid-item1 {
-        grid-column: auto;
+/* Panels' width is changed to a 100% and top border radius is removed so it looks better on small screens */
+@media only screen and (max-width: 400px) {
+    .main-container {
+        max-width: 100%;  
+        height: 100%;
+        margin-top: 0;
     }
-    .grid-item3 {
-        grid-row: auto;
-    }
-    .grid-item4 {
-        grid-row: auto;
-    }
-    .grid-item5 {
-        grid-column: auto;
-    }
-}
-
-/* Changed the size of the quotation mark that's in the background of the 1st testimonial and moved it to the right for visual clarity. Also lowered font sizes for the names and 'verified graduate' text, so it looks cleaner. */
-@media only screen and (max-width: 480px) {
-    .quotation-mark-img {
-        max-width: 100px;
-        right: 2rem;
-    }
-
-    .name {
-        font-size: 1.1rem;
-    }
-    
-    .title {
-        font-size: 0.8rem;
-    }
-}
-
-/* For super small screens - increased width so it looks good at 320px which i found on the internet is a standard for smallest devices for responsive designs */
-@media only screen and (max-width: 350px) {
-    .grid-container {
-        max-width: 99%;
+    .left-panel {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
     }
 }

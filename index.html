@@ -4,70 +4,91 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Paweł Świercz">
-        <meta name="description" content="Testimonials using css grid">
-        <title>Testimonials - CSS Grid</title>
+        <meta name="description" content="Results Page - Frontend Mentor project">
+        <title>Results</title>
         <link rel="stylesheet" href="styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap" rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png">
+        <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
     </head>
     <body>
         <main>
-            <div class="grid-container">
-                <div class="grid-item1 testimonial ">
-                    <section class="item-heading">
-                        <img src="images/image-daniel.jpg" class="photo border-1" alt="Daniel Clifford photo">
-                        <section class="item-heading-text">
-                            <p class="name">Daniel Clifford</p>
-                            <p class="title">Verified Graduate</p>
-                        </section>
-                        <img class="quotation-mark-img" src="images/bg-pattern-quotation.svg" alt="Quotation Mark symbol for the background">
-                    </section>
-                    <p class="heading">I received a job offer mid-course, and the subjects I learned were current, if not more so, in the company I joined. I honestly feel I got every penny's worth.</p>
-                    <p class="description">" I was an EMT for many years before I joined the bootcamp. I've been looking to make a transition and have heard some people who had an amazing experience here. I signed up for the free intro course and found it incredibly fun! I enrolled shortly thereafter. The next 12 weeks was the best - and the most grueling - time of my life. Since completing the course I've successfully switched careers, working as a Software Engineer at a VR startup. "</p>
+            <div class="main-container">
+                <!-- RESULTS -->
+                <div class="left-panel">
+                    <h1 class="title left-h">Your Result</h1>
+                    <div class="score">
+                        <p class="score-main">76</p>
+                        <p class="score-sub">of 100</p>
+                    </div>
+                    <h2 class="sub-title">Great</h2>
+                    <p class="description">You scored higher than 65% of the people who have taken these tests.</p>
                 </div>
-                <div class="grid-item2 testimonial">
-                    <section class="item-heading">
-                        <img src="images/image-jonathan.jpg" class="photo" alt="Jonathan Walters photo">
-                        <section class="item-heading-text">
-                            <p class="name">Jonathan Walters</p>
-                            <p class="title">Verified Graduate</p>
-                        </section>
-                    </section>
-                    <p class="heading">The team was very supportive and kept me motivated</p>
-                    <p class="description">" I started as a total newbie with virtually no coding skills. I now work as a mobile engineer for a big company. This was one of the best investments I've made in myself. "</p>
-                </div>
-                <div class="grid-item3 testimonial">
-                    <section class="item-heading">
-                        <img src="images/image-kira.jpg" class="photo" alt="Kira Whittle photo">
-                        <section class="item-heading-text">
-                            <p class="name">Kira Whittle</p>
-                            <p class="title">Verified Graduate</p>
-                        </section>
-                    </section>
-                    <p class="heading">Such a life-changing experience. Highly recommended!</p>
-                    <p class="description">" Before joining the bootcamp, I've never written a line of code. I needed some structure from proffesionals who can help me learn programming step by step. I was encouraged to enroll by a former student of theirs who can only say wonderful things about the program. The entire curriculum and staff did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial could ever have. In fact, I've often referred to it during interviews as an example of my development experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers. 100% recommend! "</p>
-                </div>
-                <div class="grid-item4 testimonial">
-                    <section class="item-heading">
-                        <img src="images/image-jeanette.jpg" class="photo" alt="Jeanette Harmon photo">
-                        <section class="item-heading-text">
-                            <p class="name">Jeanette Harmon</p>
-                            <p class="title">Verified Graduate</p>
-                        </section>
-                    </section>
-                    <p class="heading">An overall wonderful and rewarding experience</p>
-                    <p class="description">" Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living while doing something I love. "</p>
-                </div>
-                <div class="grid-item5 testimonial">
-                    <section class="item-heading">
-                        <img src="images/image-patrick.jpg" class="photo border-violet" alt="Patrick Abrams photo">
-                        <section class="item-heading-text">
-                            <p class="name">Patrick Abrams</p>
-                            <p class="title">Verified Graduate</p>
-                        </section>
-                    </section>
-                    <p class="heading">Awesome teaching support from TAs who did the bootcamp themselves. Getting guidances from them and learning from their experiences was easy.</p>
-                    <p class="description">" The staff seem genuinely concerned about my progress which I find really refreshing. The program gave me the confidence necessary to be able to go our in the worlds and present myself as a capable junior developer. The standard is above the rest. You will get the personal attention you need from an incredible community of smart and amazing people. "</p>
+                <!-- SUMMARY -->
+                <div class="right-panel">
+                    <!-- REACTION -->
+                    <h1 class="title right-h">Summary</h1>
+                    <div class="categories-box">
+                        <div class="shadow shad-reaction">
+                            <div class="shadow-2">
+                                <section class="category-section reaction">
+                                    <div class="summary-category-box">
+                                        <img class="icon" src="images/icon-reaction.svg" alt="Lightning icon">
+                                        <h2 class="summary-h">Reaction</h2>
+                                    </div>
+                                    <div class="summary-score-box">
+                                        <p class="summary-score">80</p>
+                                        <p class="summary-max-score">/ 100</p>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                        <!-- MEMORY -->
+                        <div class="shadow shad-memory">
+                            <div class="shadow-2">
+                                <section class="category-section memory">
+                                    <div class="summary-category-box">
+                                        <img class="icon" src="images/icon-memory.svg" alt="Brain icon">
+                                        <h2 class="summary-h">Memory</h2>
+                                    </div>
+                                    <div class="summary-score-box">
+                                        <p class="summary-score">92</p>
+                                        <p class="summary-max-score">/ 100</p>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                        <!-- VERBAL -->
+                        <div class="shadow shad-verbal">
+                            <div class="shadow-2">
+                                <section class="category-section verbal">
+                                    <div class="summary-category-box">
+                                        <img class="icon" src="images/icon-verbal.svg" alt="Speech bubble icon">
+                                        <h2 class="summary-h">Verbal</h2>
+                                    </div>
+                                    <div class="summary-score-box">
+                                        <p class="summary-score">61</p>
+                                        <p class="summary-max-score">/ 100</p>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                        <!-- VISUAL -->
+                        <div class="shadow shad-visual">
+                            <div class="shadow-2">
+                                <section class="category-section visual">
+                                    <div class="summary-category-box">
+                                        <img class="icon" src="images/icon-visual.svg" alt="Eye icon">
+                                        <h2 class="summary-h">Visual</h2>
+                                    </div>
+                                    <div class="summary-score-box">
+                                        <p class="summary-score">72</p>
+                                        <p class="summary-max-score">/ 100</p>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="continue-button">Continue</button>
                 </div>
             </div>
         </main>
