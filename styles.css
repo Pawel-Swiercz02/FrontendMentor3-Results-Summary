@@ -1,0 +1,189 @@
+:root {
+    --violet: hsl(263, 55%, 52%);
+    --dark-grayish-blue: hsl(217, 19%, 35%);
+    --dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%); /* BACKGROUND */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    min-height: 100dvh;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500;
+    background-color: var(--light-grayish-blue);
+}
+
+.grid-container {
+    max-width: 90%;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.testimonial {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px -3px var(--light-gray);
+}
+
+.grid-item1, .grid-item2, .grid-item5 {
+    color: var(--light-grayish-blue);
+}
+
+.grid-item3, .grid-item4 {
+    color: var(--dark-blackish-blue);
+}
+
+.grid-item1 {
+    grid-column: span 2;
+    background-color: var(--violet);
+    z-index: 1;
+    position: relative;
+}
+
+.quotation-mark-img {
+    width: 22%;
+    z-index: -1;
+    position: absolute;
+    top:0;
+    right: 7rem;
+}
+
+.grid-item2 {
+    background-color: var(--dark-grayish-blue);
+}
+
+.grid-item3 {
+    grid-row: span 2;
+    background-color: var(--white);
+}
+
+.grid-item4 {
+    background-color: var(--white);
+}
+
+.grid-item5 {
+    grid-column: span 2;
+    background-color: var(--dark-blackish-blue);
+}
+
+.item-heading {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.photo {
+    border-radius: 50%;
+    max-width: 2.9rem;
+}
+
+.border-1 {
+    border: 0.3rem solid hsla(0, 0%, 81%, 0.5);
+}
+
+.border-violet {
+    border: 0.3rem solid var(--violet);
+}
+
+.name {
+    font-size: 1.3rem;
+}
+
+.title {
+    font-size: 1.1rem;
+    opacity: 80%;
+}
+
+.heading {
+    font-size: 1.6rem;
+    padding: 1.5rem 0;
+}
+
+.description {
+    opacity: 70%;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+}
+
+/* Prevents grid from creating a 5h column for items #4 and #5 on really wide screens */
+@media only screen and (min-width: 1791px) {
+    .grid-item4 {
+        grid-row: 2;
+    }
+
+    .grid-item5 {
+        grid-row: 2;
+    }
+}
+
+@media only screen and (max-width: 1430px) {
+    main {
+        margin: 1.5rem 0;
+    }
+
+    .grid-item5 {
+        grid-column: 2 / 4;
+        grid-row: 2;
+    }
+}
+
+@media only screen and (max-width: 1040px) {
+    .grid-item5 {
+        grid-column: span 2;
+        grid-row: auto;
+    }
+}
+
+/* At this point the grid turns into one column for readability as 2 columns would get too squashed. */
+@media only screen and (max-width: 660px) {
+    .grid-item1 {
+        grid-column: auto;
+    }
+    .grid-item3 {
+        grid-row: auto;
+    }
+    .grid-item4 {
+        grid-row: auto;
+    }
+    .grid-item5 {
+        grid-column: auto;
+    }
+}
+
+/* Changed the size of the quotation mark that's in the background of the 1st testimonial and moved it to the right for visual clarity. Also lowered font sizes for the names and 'verified graduate' text, so it looks cleaner. */
+@media only screen and (max-width: 480px) {
+    .quotation-mark-img {
+        max-width: 100px;
+        right: 2rem;
+    }
+
+    .name {
+        font-size: 1.1rem;
+    }
+    
+    .title {
+        font-size: 0.8rem;
+    }
+}
+
+/* For super small screens - increased width so it looks good at 320px which i found on the internet is a standard for smallest devices for responsive designs */
+@media only screen and (max-width: 350px) {
+    .grid-container {
+        max-width: 99%;
+    }
+}
